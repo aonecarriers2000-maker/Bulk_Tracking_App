@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A-One Carriers | Bulk Tracker</title>
+    <style>
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background-color: #f0f2f5; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            margin: 0; 
+        }
+        .container { 
+            background: white; 
+            padding: 40px; 
+            border-radius: 12px; 
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1); 
+            width: 450px; 
+            text-align: center; 
+        }
+        
+        /* Brand Header Styling */
+        .brand-header {
+            color: #1a2a6c; /* Deep Professional Blue */
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            border-bottom: 2px solid #1a2a6c;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+        
+        .sub-title { 
+            color: #555; 
+            margin-top: 10px;
+            margin-bottom: 25px; 
+            font-size: 18px;
+            font-weight: 400;
+        }
+
+        .guide-box { 
+            background: #f8fbff; 
+            padding: 15px; 
+            border-radius: 8px; 
+            margin-bottom: 20px; 
+            font-size: 0.85em; 
+            border: 1px solid #d1e3f8; 
+            text-align: left; 
+            color: #444;
+        }
+
+        .download-link { 
+            display: inline-block; 
+            margin-bottom: 25px; 
+            color: #3498db; 
+            text-decoration: none; 
+            font-weight: 600;
+            font-size: 0.95em;
+        }
+        .download-link:hover { text-decoration: underline; }
+
+        input[type="file"] { 
+            margin: 20px 0; 
+            width: 100%; 
+            font-size: 0.9em;
+        }
+
+        button { 
+            background: #1a2a6c; 
+            color: white; 
+            border: none; 
+            padding: 14px 25px; 
+            border-radius: 6px; 
+            cursor: pointer; 
+            width: 100%; 
+            font-size: 16px; 
+            font-weight: bold;
+            transition: background 0.3s ease; 
+        }
+        button:hover { 
+            background: #b21f1f; /* Accent color change on hover */
+        }
+        
+        .footer-note {
+            margin-top: 20px;
+            font-size: 0.75em;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- New Brand Header -->
+        <div class="brand-header">A-One Carriers</div>
+        <div class="sub-title">Bulk Courier Tracker</div>
+
+        <div class="guide-box">
+            <strong>Instructions:</strong><br>
+            1. Download the sample CSV template below.<br>
+            2. Enter your tracking numbers in the <code>awb</code> column.<br>
+            3. Upload the file to get real-time status from ParcelX.
+        </div>
+
+        <a href="/download-template" class="download-link">📥 Download Guide CSV Template</a>
+
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" accept=".csv" required>
+            <button type="submit">PROCESS BULK TRACKING</button>
+        </form>
+
+        <div class="footer-note">
+            Powered by ParcelX Aggregator API
+        </div>
+    </div>
+</body>
+</html>
